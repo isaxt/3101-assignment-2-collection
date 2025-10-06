@@ -12,9 +12,12 @@ export default function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("source/**/*.css");
 	eleventyConfig.addPassthroughCopy("source/**/*.js");
 
+	eleventyConfig.addPassthroughCopy("source/_includes/audio");
+
 	// By default, all pages will use the "base.html" template in
 	// source/_includes/base.html
 	// You can either change this directly for all pages, or override
 	// this for specific pages using the "layout" tag
 	eleventyConfig.addGlobalData("layout", "base.html");
 };
+
