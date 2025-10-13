@@ -7,6 +7,18 @@ bodyClass: "home"
   <h1>treat this experience...as if you were in an art installation...</h1>
   <h1>REALLY look at the image while you are listening to the music :D </h1>
   <ul class="site-list">
-    <li><a href="source/_includes/"> {{ content }} </a></li>
-  </ul>
+  {% for page in collections.all %}
+    {% if page.url != "/" %}
+      <ul>
+        <a href="{{ page.url }}">
+          {% if page.data.title %}
+            {{ page.data.title }}
+          {% else %}
+            {{ page.fileSlug }}
+          {% endif %}
+        </a>
+      </ul>
+    {% endif %}
+  {% endfor %}
+</ul>
 </div>

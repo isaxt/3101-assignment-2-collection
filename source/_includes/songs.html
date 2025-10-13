@@ -2,11 +2,14 @@
 layout: base.html
 ---
 
-
-<h1> {{ title }} </h1>
-<audio src="/_includes/audio/{{ audio }}" controls> </audio>
-
-{{ content}}
-
-<img src="/_includes/photo/{{ photo }}" />
-{{ content }}
+<div class="overlay-container">
+  <img src="/_includes/photo/{{ photo }}" alt="{{ title }}">
+  
+  <div class="overlay-content">
+    <h1>{{ title }}</h1>
+    <audio src="/_includes/audio/{{ audio }}" controls></audio>
+    <div class="text-content">
+      {{ content }}
+    </div>
+  </div>
+</div>
