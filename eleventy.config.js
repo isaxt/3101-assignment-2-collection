@@ -2,7 +2,14 @@
 
 // If you want to experiment with other configuration settings,
 // you can read about them here: https://www.11ty.dev/docs/config/
+
+//update from class-- imports the base plug in
+import { HtmlBasePlugin } from "@11ty/eleventy";
+
 export default function (eleventyConfig) {
+	//copied from class-- uses the base plug in
+	eleventyConfig.addPlugin(HtmlBasePlugin);
+
 	// This sets the input directory for our site
 	eleventyConfig.setInputDirectory("source");
 
@@ -13,6 +20,7 @@ export default function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("source/**/*.js");
 
 	eleventyConfig.addPassthroughCopy("source/_includes/audio");
+	eleventyConfig.addPassthroughCopy("source/_includes/photo");
 
 	// By default, all pages will use the "base.html" template in
 	// source/_includes/base.html

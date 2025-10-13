@@ -1,9 +1,10 @@
 ---
 layout: songs.html
 title: GALORE -- CLONNEX + asteria
-bodyClass: "home"
 
 audio: galore.mp3
+photo: galore_visual.png
+bodyClass: "home"
 ---
 
 
